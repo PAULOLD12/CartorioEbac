@@ -1,7 +1,7 @@
-#include <stdio.h> //Biblioteca de ComunicaÁ„o com o Usu·rio
-#include <stdlib.h> //Biblioteca Para Alocar EspaÁo na MemÛria
-#include <locale.h> //Biblioteca Para  alocaÁıes de Texto por Regi„o
-#include <string.h> //biblioteca resÛnsavel por cuidar das string
+#include <stdio.h> //Biblioteca de Comunica√ß√£o com o Usu√°rio
+#include <stdlib.h> //Biblioteca Para Alocar Espa√ßo na Mem√≥ria
+#include <locale.h> //Biblioteca Para  aloca√ß√µes de Texto por Regi√£o
+#include <string.h> //biblioteca res√≥nsavel por cuidar das string
 
 int cadastrar()
 {
@@ -23,36 +23,36 @@ int cadastrar()
 	fprintf(file, cpf); 		//Salva o Valor da Variavel Dentro Do Arquivo
 	fclose(file);  		//Fecha o Arquivo
 	
-	file = fopen(arquivo, "a"); 		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a"); 		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, ",");  		//Escreve uma virgula apos o CPF
 	fclose(file); 		//Fecha o arquivo
 	
 	printf("Digite o Nome a Ser Cadastrado: \n");
 	scanf("%s", nome);
 	
-	file = fopen(arquivo, "a"); 		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a"); 		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, nome);  		//Escreve um Nome cadastrado no Arquivo
 	fclose(file); 		//Fecha o arquivo
 	
-	file = fopen(arquivo, "a"); 		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a"); 		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, ",");  		//Escreve uma virgula apos o CPF
 	fclose(file); 		//Fecha o arquivo
 	
 	printf("Digite o SobreNome a Ser Cadastrado: \n");
 	scanf("%s", sobrenome);
 	
-	file = fopen(arquivo, "a"); 		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a"); 		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, sobrenome);  		//Escreve um SobreNome cadastrado no Arquivo
 	fclose(file); 		//Fecha o arquivo
 	
-	file = fopen(arquivo, "a"); 		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a"); 		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, ",");  		//Escreve uma virgula apos o CPF
 	fclose(file); 		//Fecha o arquivo
 	
 	printf("Digite o Cargo a ser Cadastrado: \n");
 	scanf("%s", cargo);
 	
-	file = fopen(arquivo, "a");  		//Abre o Arquivo com intenÁ„o de atualizar-lo
+	file = fopen(arquivo, "a");  		//Abre o Arquivo com inten√ß√£o de atualizar-lo
 	fprintf(file, cargo);  			//Escreve o Cargo cadastrado no Arquivo
 	fclose(file);  		//Fecha o arquivo
 	
@@ -70,11 +70,11 @@ int consultar()
 	scanf("%s",cpf);
   	
 	FILE *file;	  		//Busca Metodos de Criar e buscar arquivos na Biblioteca
-	file = fopen(cpf,"r");  		//Abre o Arquivo com intenÁ„o de leitura
+	file = fopen(cpf,"r");  		//Abre o Arquivo com inten√ß√£o de leitura
   	
 	if(file == NULL)
 	{
-		printf("N„o Localizado!.\n");
+		printf("N√£o Localizado!.\n");
 	}
 
 	while(fgets(conteudo, 205, file) != NULL)
@@ -91,7 +91,7 @@ int deletar()
 {
 	char cpf[40];
 	
-	printf("Digite o CPF do Usu·rio a Ser deletado : \n");
+	printf("Digite o CPF do Usu√°rio a Ser deletado : \n");
 	scanf("%s", cpf);
 	
 	FILE *file;
@@ -99,12 +99,12 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("Usu·rio N„o Encontrado !.\n\n");
+		printf("Usu√°rio N√£o Encontrado !.\n\n");
 	}
 	else
 	{
 		remove(cpf);  		//Remove uma pasta com mesmo nome da variavel CPF
-		printf("Usu·rio Deletado Com Sucesso ! \n");
+		printf("Usu√°rio Deletado Com Sucesso ! \n");
 	}	
 	system("pause");	
 }
@@ -122,13 +122,13 @@ int main()
 		setlocale(LC_ALL, "Portuguese"); 	//Definindo a Linguagem
 	
 					//Menu Inicial
-		printf("********** CartÛrio Da Ebac **********\n\n");	
-		printf("Selecione Uma Das OpÁıes Abaixo:\n\n");
-		printf("\t 1 - Cadastrar Usu·rio \n");
-		printf("\t 2 - Consultar Usu·rio \n");
-		printf("\t 3 - Deletar Usu·rio \n\n");
+		printf("********** Cart√≥rio Da Ebac **********\n\n");	
+		printf("Selecione Uma Das Op√ß√µes Abaixo:\n\n");
+		printf("\t 1 - Cadastrar Usu√°rio \n");
+		printf("\t 2 - Consultar Usu√°rio \n");
+		printf("\t 3 - Deletar Usu√°rio \n\n");
 	
-		printf("Digite a OpÁ„o Desejada: ");
+		printf("Digite a Op√ß√£o Desejada: ");
 		scanf("%d", &opcao); 	//Armazenar Escolha De Menu
 	
 		system("cls");	 //Limpar Menu
@@ -150,13 +150,11 @@ int main()
 			break;
 			
 			default:
-				printf("OpÁ„o Invalida \n");
+				printf("Op√ß√£o Invalida \n");
 				system("pause");
 			break;
 		}
 	}
-	
-		//printf("Esse SoftWare È de Livre Acesso Para Alunos Cursando a Ebac, By Paulo");
 	
 	
 }
